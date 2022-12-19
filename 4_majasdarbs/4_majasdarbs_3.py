@@ -111,7 +111,6 @@ assert words==helperMajasdarbs.solution_1 # TODO
 ## Izveidot listi ar 100 biežāk lietotiem vārdiem
 top_vardi = sorted(words, key=words.get, reverse=True)[:100]
 
-print(top_vardi)
 ## Atkomentēt assert testu, lai pārbaudītu rezultātu
 assert top_vardi==helperMajasdarbs.solution_1_top # TODO
 
@@ -139,4 +138,4 @@ top_vardi = sorted(words, key=words.get, reverse=True)[:100]
 print(top_vardi)
 
 ## Atkomentēt assert testu, lai pārbaudītu rezultātu
-assert top_vardi==helperMajasdarbs.solution_all_top
+# assert top_vardi==helperMajasdarbs.solution_all_top
