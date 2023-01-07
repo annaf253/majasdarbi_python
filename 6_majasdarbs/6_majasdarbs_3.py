@@ -25,6 +25,13 @@ cv2.imshow('image', img_caddy)
 cv2.waitKey(0)
 
 # Pārveidot TIKAI zilo krāsu par sarkanu un izvadīt uz ekrāna
-img_zils_sarkans = 0 # TODO
+img_zils_sarkans = img.copy()
+hsv = cv2.cvtColor(img_zils_sarkans, cv2.COLOR_BGR2HSV)
+lower_range = np.array([110,50,50])
+upper_range = np.array([130,255,255])
+mask = cv2.inRange(hsv, lower_range, upper_range)
+img_zils_sarkans[mask != 0] = [0,0,255]
+cv2.imshow('image', img_zils_sarkans)
+cv2.waitKey(0)
 
 cv2.destroyAllWindows()
